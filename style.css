@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: grey;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 140px;
+  border: 1.5px solid black;
+  border-right: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.button:last-child {
+  border-right: 1.5px solid black;
+}
+
+.fab {
+  color: white;
+}
+span {
+  margin-left: 5px;
+  color: white;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.button:nth-child(1)::before {
+  background: #4267b2;
+}
+.button:nth-child(2)::before {
+  background: #00acee;
+}
+.button:nth-child(3)::before {
+  background: #ff4500;
+}
+.button:nth-child(4)::before {
+  background: #0e76a8;
+}
+.button:nth-child(5)::before {
+  background: #e1306c;
+}
